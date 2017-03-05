@@ -1,14 +1,75 @@
-<div class="row">
+<style>
+.products1 {
+  background-color:white;
+  max-width:1200px;
+  margin-top:20px;
+  margin-bottom:80px;
+  margin-left:auto;
+  margin-right:auto;
+}
+</style>
+
+<div class="row products1">
+
+
+
+
+
+  <head>
+
+      <!-- Insert to your webpage before the </head> -->
+      <script src="http://uguru-realestate-us-jun202013.businesscatalyst.com/3d-slider/sliderengine/jquery.js"></script>
+      <script src="http://uguru-realestate-us-jun202013.businesscatalyst.com/3d-slider/sliderengine/amazingslider.js"></script>
+      <script src="http://uguru-realestate-us-jun202013.businesscatalyst.com/3d-slider/sliderengine/initslider-1.js"></script>
+      <!-- End of head section HTML codes -->
+
+  </head>
+  <body>
+
+      <div class"container">
+      <div class"row topspace">
+      <div class"col-md-12">
+      <!-- Insert to your webpage where you want to display the slider -->
+      <div id="amazingslider-1" style="display:block;position:relative;margin:16px auto 56px;">
+          <ul class="amazingslider-slides" style="display:none;">
+              <li><img src="http://s.images-iherb.com/i/banners/dbranbanner0301R2en-US.jpg" alt="Privilege 1" /></li>
+              <li><img src="http://s.images-iherb.com/i/banners/dsoapbanner0301R2en-US.jpg" alt="Privilege 2" /></li>
+              <li><img src="http://s.images-iherb.com/i/banners/dkorebanner0301R1en-US.jpg" alt="Privilege 3" /></li>
+          </ul>
+      </div>
+      <!-- End of body section HTML codes -->
+      </div>
+      </div>
+      </div>
+
+  </body>
+
+
+
+
+
+<br>
   <% @products.each do |product| %>
     <div class="col-xs-6 col-md-3">
+      <span class="thumbnail">
+        <br>
       <%= link_to product_path(product) do %>
         <% if product.image.present? %>
-          <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
+          <%= image_tag(product.image.thumb.url) %>
         <% else %>
-          <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+          <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
         <% end %>
       <% end %>
-      <%= product.title %> ￥ <%= product.price %>
+
+      <h4 class="text-center">
+      <%= product.title %> &nbsp $<%= product.price %>
+      </h4>
+      </span>
+      <br>
+      <br>
+      <br>
+      <br>
+
     </div>
   <% end %>
 </div>
