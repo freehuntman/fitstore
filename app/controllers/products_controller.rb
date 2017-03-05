@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
   before_action :validate_search_key, only: [:search]
   def index
     @products = Product.all
-    @products = @products.paginate(:page => params[:page], :per_page => 10)
+    @products = @products.paginate(:page => params[:page], :per_page => 12)
   end
 
   def show
