@@ -75,7 +75,30 @@ products = [{title:"FOOD1",
           description: "xxx",
           image_path: "#{Rails.root}/app/assets/images/FOOD12.jpg"}
 
-          ]
+					{title:"Lapasa Women's Workout Bras Wirefree DOUBLE LAYER Sports Yoga Bra Stretchy Racerback",
+          description: "88% Polyester，12% Spandex Fabric are super soft and lightweight, also stretchy. Quick-Dry material Keep you cool and dry all the day.",
+          image_path: "#{Rails.root}/app/assets/images/bra.png"},
+
+          {title:"BINZI Big Face Sports Watch for Men, Waterproof Military Wrist Digital Watches in Black Silicone Band",
+          description: "Luxury sports watches with silicone strap
+                        Luminous hands and hour markers
+Men's analog digital watches
+Daily waterproof, can not wear when swimming and bathing
+",
+          image_path: "#{Rails.root}/app/assets/images/watch.png"},
+
+          {title:"Weslo Cadence G 5.9 Treadmill",
+          description: "Space saver design. This treadmill can fold up.
+Six personal trainer workouts.
+Two-position incline.
+Comfortable cushioning.",
+          image_path: "#{Rails.root}/app/assets/images/runningmachine.png"},
+          {title:"Optimum Nutrition Pro Gainer Protein Powder, Double Chocolate, 5.09 Pounds ",
+          description: "High-Quality Proteins: Pro Gainer is comprised of high biological value proteins, which means they are easily digested and absorbed so they provide a full complement of amino acids to support the rebuilding process. Each serving of Pro Gainer provides a 60-gram dose of premium muscle-building protein made from 7 unique sources.",
+          image_path: "#{Rails.root}/app/assets/images/protein.png"}
+
+
+					]
 
 
 p1 = Product.create([title:products[0][:title],description:products[0][:description],quantity:20,price:30,image:open(products[0][:image_path])])
@@ -90,5 +113,9 @@ p9 = Product.create([title:products[8][:title],description:products[8][:descript
 p10 = Product.create([title:products[9][:title],description:products[9][:description],quantity:20,price:30,image:open(products[9][:image_path])])
 p11 = Product.create([title:products[10][:title],description:products[10][:description],quantity:20,price:30,image:open(products[10][:image_path])])
 p12 = Product.create([title:products[11][:title],description:products[11][:description],quantity:20,price:30,image:open(products[11][:image_path])])
+p13 = Product.create([title:products[12][:title],description:products[12][:description],quantity:20,price:30,image:open(products[12][:image_path])])
+p14 = Product.create([title:products[13][:title],description:products[13][:description],quantity:20,price:30,image:open(products[13][:image_path])])
+p15 = Product.create([title:products[14][:title],description:products[14][:description],quantity:20,price:30,image:open(products[14][:image_path])])
+p16 = Product.create([title:products[15][:title],description:products[15][:description],quantity:20,price:30,image:open(products[15][:image_path])])
 
 puts "create products"
